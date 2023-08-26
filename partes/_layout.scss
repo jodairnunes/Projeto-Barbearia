@@ -1,0 +1,326 @@
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.bg-home {
+  position: relative;
+}
+
+.bg-home::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% 0%;
+  opacity: 0.8;
+}
+
+
+
+// ============= SESSÃO HERO ==================
+.hero {
+  color: $white-normal-color;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+
+  h1 {
+    text-align: center;
+    line-height: 150%;
+    max-width: 940px;
+    font-size: 46px;
+  }
+  
+  p {
+    text-align: center;
+    margin: 15px 0;
+  }
+}
+
+.button-contact {
+  padding: 15px 28px;
+  color: $white-normal-color;
+  background-color: $red-normal-color;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.button-contact:hover {
+  animation: scaleButton 0.6s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  } 
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+
+    h1 {
+      font-size: 34px;
+      padding: 0 15px;
+      width: 100%;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  .hero h1{
+    font-size: 24px;
+  }
+}
+// ==============================================
+
+
+
+//  ========= SOBRE / ABOUT =====================
+
+.about {
+  background-color: $primary-normal-color;
+  color: $white-normal-color;
+  overflow: hidden;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12%;
+  padding: 35px 6% 60px 6%; 
+
+
+  img {
+    max-width: 570px;
+  }
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description {
+  h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+  }
+  p {
+    margin-bottom: 15px;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-description {
+    padding: 0 9%;
+  }
+}
+// ==============================
+
+
+// =========== SERVICES =========
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white-normal-color;
+  color: $black-normal-color;
+  padding: 54px 15px;
+}
+
+
+.services-content h2 {
+  text-align: center;
+  text-transform:  uppercase;
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.services-content p {
+  line-height: 150%;
+  text-align: center;
+  margin-bottom: 35px;
+  max-width: 750px;
+}
+
+.carts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5%;
+  padding: 0 1.5%;
+}
+
+.cart-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: $white-normal-color;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  margin-bottom: 35px;
+  img {
+    width: 100%;
+    max-width: 354px;
+    transition: .2s;
+  }
+}
+.cart-box img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.cart-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: $white-normal-color;
+  z-index: 2;
+}
+
+.cart-info button{
+  color: $white-normal-color;
+  background-color: $red-normal-color;
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: default;
+}
+
+@media (max-width: 820px) {
+  .carts {
+    flex-direction: column;
+  }
+
+  .cart-box img {
+    max-width: 740px;
+  }
+}
+// ================================
+
+
+//  =========== FOOTER ============
+.map h2{
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 15px;
+  gap: 35px;
+  text-align: center;
+  color: $white-normal-color;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+  color: $white-normal-color;
+}
+
+.footer-icons a:hover {
+  i{
+    animation: translateY 0.8s infinite alternate;
+  color: $red-light-color;
+}
+}
+
+
+@keyframes translateY {
+from {
+  transform: translateY(0) scale(1);
+}
+to {
+  transform: translateY(-8px) scale(1.1);
+}
+}
+// ===========================
+
+
+// ====== BOTÃO WHATSAPP ======
+.btn-whatsapp {
+  position: fixed;
+  right: 25px;
+  bottom: 15px;
+  z-index: 3;
+
+
+  img {
+    max-width: 70px;
+    transition: .4s;
+  }
+
+  img:hover {
+    transform: scale(1.15);
+  }
+}
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 150px;
+  right: 80px;
+  bottom: 14px;
+  text-align: center;
+  color: $white-normal-color;
+  background-color: $red-light-color;
+  padding: 5px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 820px) {
+  .btn-whatsapp{
+    img {
+      max-width: 55px;
+    }
+  }
+  .btn-whatsapp .tooltip-text {
+    right: 62px;
+    bottom: 9px;
+    width: 130px;
+    font-size: .9rem;
+  }
+}

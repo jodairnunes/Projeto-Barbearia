@@ -1,0 +1,39 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+@import "partes/colors";
+@import "partes/header";
+@import "partes/layout";
+
+body {
+  font-family: 'Sora', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: $primary-normal-color;
+  color: $white-normal-color;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: 'Sora', sans-serif;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
